@@ -13,9 +13,13 @@ from GlobalVoiceMakerLib.audio_tools import preprocess
 from GlobalVoiceMakerLib.slice import split
 
 check_for_ffmpeg.run_checker()
+
 linkto = input("Enter link: ")
+
 YouTube.download_video(linkto)
+
 preprocess.preprocess_and_resample_audio()
+
 split.split_audio_into_chunks(
     min_dur=1,
     max_dur=5,
